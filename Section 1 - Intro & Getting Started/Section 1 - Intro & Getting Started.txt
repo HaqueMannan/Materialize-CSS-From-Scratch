@@ -1,0 +1,35 @@
+Section 1.1 Introduction & Setup:
+
+--------------------------------------
+Sandbox Environment
+--------------------------------------
+The materialize_sandbox folder contains all the html base files. We will use the base files and update each file as we learn Materialize from scratch.
+
+
+--------------------------------------
+What is Materialize & Why use It?
+--------------------------------------
+- Modern framework based on Google's Material Design.
+- Similar to frameworks such as Bootstrap, Foundation, etc.
+- Interactive Components.
+- Extremely Customizable.
+
+
+--------------------------------------
+What is Material Design
+--------------------------------------
+- Design language/scheme developed by Google in 2014.
+- Makes liberal use of grid layouts, responsive animations, shadows etc.
+- Based on "paper & ink".
+- Most Google based UIs use the material design concept.
+
+
+--------------------------------------
+Why learn Materialize?
+--------------------------------------
+- Build beautiful websites & app interfaces with little design skills.
+- Much more than just a grid.
+- 100% responsive by design.
+- Great looking & easy to implement CSS components.
+- Many interactive JavaScript widgets and functionality.
+
