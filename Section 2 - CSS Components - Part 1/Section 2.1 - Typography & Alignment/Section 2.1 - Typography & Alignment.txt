@@ -1,0 +1,26 @@
+Section 2.1 Typography & Alignment:
+
+--------------------------------------
+Typography & Alignment
+--------------------------------------
+- The container class gives the content within the <div> wrapper a (flexible) width and a margin auto which pushes the content into the middle and adds spacing to the sides.
+- There are no special classes for headings within Materialize (contrast with Bootstrap 4 Heading classes).
+- Heading uses rem units. Rem is relative measurement in CSS and 1 rem is equal to the amount of pixels of the root html element. If you look at the root html element within the DOM and see the font size e.g 14px then 1 rem = 14px. So if the heading for a h1 element in Materialize is 4.2 rem then this is 4.2 x 14px = 58.8px (this can be seen in the computed tab of the dev tools within the browser).
+
+- The flow-text class formats the text to look bigger responsive to the screen size:
+   <p class="flow-text">Some Random Text.</p>
+
+- The text align classes will align the text either to the left, right or center:
+   <h5 class="left-align">Left Align Text</h5>
+   <h5 class="right-align">Right Align Text</h5>
+   <h5 class="center-align">Center Align Text</h5>
+
+- To vertically align text we would use a <div> wrapper around the text and add the class to the div to vertically align the text to the center:
+   <div style="height:400px" class="valign-wrapper">
+      <h5>Vertically Align Text to the centre</h5>
+   </div>
+
+- Quick floats allows you to align text using the class left or right, however, this will require a <div> element of clearfix to fix alignment for the remaining text:
+   <p class="left">
+   <p class="right">
+   <div class="clearfix"></div>
