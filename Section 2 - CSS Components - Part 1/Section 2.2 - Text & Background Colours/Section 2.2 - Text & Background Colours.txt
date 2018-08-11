@@ -1,0 +1,50 @@
+Section 2.2 Text & Background Colours:
+
+--------------------------------------
+Text & Background Colours
+--------------------------------------
+- Materialize allows you to use classes to select from a variety of colours as well as different shades of the colour to choose from. This applies to both text and background colours for any element.
+
+- The standard background colour classes are:
+   <p class="red"></p>
+   <p class="blue"></p>
+   <p class="orange"></p>
+   <p class="green"></p>
+   <p class="yellow"></p>
+   <p class="purple"></p>
+   <p class="pink"></p>
+   <p class="grey"></p>
+   <p class="brown"></p>
+   <p class="white"></p>
+
+- To add the colour to the text we would append -text at the end of the colour for example:
+   <p class="red-text"></p>
+
+The less common colour classes are:
+   <p class="deep-purple"></p>
+   <p class="indigo"></p>
+   <p class="cyan"></p>
+   <p class="teal"></p>
+   <p class="lime"></p>
+   <p class="amber"></p>
+   <p class="light-green"></p>
+   <p class="deep-orange"></p>
+   <p class="blue-grey"></p>
+
+- To add the colour to the text we would append -text at the end of the colour for example:
+   <p class="deep-purple-text"></p>
+
+- To darken the colour gradient we would use the darken- class along with the level of gradation between 1 to 4:
+   <p class="red darken-1"></p>
+   <p class="red darken-2"></p>
+   <p class="red darken-3"></p>
+   <p class="red darken-4"></p>
+
+- To lighten the colour gradient we would use the lighten- class along with the level of gradation between 1 to 4:
+   <p class="red lighten-1"></p>
+   <p class="red lighten-2"></p>
+   <p class="red lighten-3"></p>
+   <p class="red lighten-4"></p>
+
+- Refer to the Materialize guide on colours to view all the different colour pallet classes available in Materialize CSS:
+   https://www.udemy.com/materialize-css-from-scratch-with-5-projects/learn/v4/t/lecture/9380804?start=0
