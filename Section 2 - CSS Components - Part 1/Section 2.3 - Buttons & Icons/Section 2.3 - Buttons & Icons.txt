@@ -1,0 +1,54 @@
+Section 2.3 Buttons & Icons:
+
+--------------------------------------
+Buttons
+--------------------------------------
+- We can add the class btn to a <button> or <a> element to create a standard default Materialize button style:
+   <button class="btn">Read More</button>
+   <a class="btn">Read More</a>
+
+- To add colour to the button we would use the Materialize background colour classes:
+   <a class="btn black">Black Button</a>
+
+- Materialize also has a animated wave effect on click of a button style by using the class waves-effect and waves-light on our <button> or <a> element:
+   <button class="btn waves-effect waves-light">Button</button>
+   <a class="btn waves-effect waves-light">Click Me</a>
+
+- We can also add colours to the waves effect by using the waves- followed by the colour:
+   <button class="btn white red-text waves-effect waves-red">Button</button>
+   <a class="btn white teal-text waves-effect waves-yellow">Button</a>
+
+- We can make a button large by using the class btn-large class as well as disable a button by using the disable class on the <button> or <a> element:
+   <button class="btn-large">Large Button</button>
+   <a class="btn disabled">Disabled Button</a>
+   <button class="btn-large disabled">Large Disabled Button</button>
+
+--------------------------------------
+Icons
+--------------------------------------
+- We can use icons within our buttons using either the Materialize or Font-Awesome icon library (the links must be added to the html file in order to use).
+- In order to use the Materialize icons we need a <i> element with the class of material-icon and within the <i> element we put in the identifier of the icon we wish to use. 
+   <i class="material-icon">shopping_cart</i>
+
+- We can change the colour of the icon using the text-colour. We can also increase or decrease the icon size using the large, medium, small and tiny classes:
+   <i class="material-icon red-text large">shopping_cart</i>
+
+- To add the icon to a button we must wrap the <i> element between either a <button> or <a> element:
+   <button class="btn">
+      <i class="material-icon">shopping_cart</i>
+   </button>
+
+- We can align the icon to either the left, right or center by using the text alignment class on the <button> or <a> element:
+   <a class="btn waves-effect waves-red">
+      <i class="material-icon right">shopping_cart</i> Buy Now
+   <a>
+
+- Note we can use font-awesome icons by puttin the icon class within the <i> element:
+   <button class="btn">
+      <i class="fas fa-shopping_cart left"></i>
+   </button>
+
+
+- To view more material icons or font-awesome icons go to:
+https://material.io/tools/icons/?style=baseline
+https://fontawesome.com/icons?d=gallery
