@@ -1,0 +1,78 @@
+Section 2.4 Floating & Fixed Action Buttons:
+
+--------------------------------------
+Floating & Fixed Action Buttons
+--------------------------------------
+- To create a floating button we would use the class btn-floating which will create a circle button.
+- We can use the btn-large class to make the size of the button bigger.
+- We can also give the wave effect by using the waves-effect and waves-light.
+- Finally we can also colour the button using the colour classes e.g. red.
+- We can add icons using the materialize icons library which requires an <i> tag with the class of materialize-icons and the within the <i> tag add the icon name.
+
+Example of a floating button (which is a round button):
+   <button class="btn-floating btn-large waves-effect waves-light red">
+      <i class="material-icons">add</i>
+   </button>
+
+- We can give a pulse effect using the pulse class on the floating button. Note we can add the pulse class on any element but it looks visually appealing on the floating button.
+   <button class="btn-floating btn-large waves-effect waves-light green pulse">
+      <i class="material-icons">publish</i>
+   </button>
+
+- The fixed action button will sit absolute/fixed on the bottom right hand corner of the screen regardless how big or small the browser screen size will go. To create a fixed action button we would need to wrap the <button> within a <div> element which has the class of fixed-action-btn.
+   <div class="fixed-action-btn">
+      <button class="btn-floating btn-large red">
+         <i class="material-icons">add</i>
+      </button>
+   </div>
+
+- We can create an affect where other buttons will popup/toggle on the click of the main button. This requires a <div> element wrapper with the class of fixed-action-btn followed by a main <button> or <a> element along with an unordered list <ul> which has <button> or <a> elements wrapped in the <li> element. Each of the buttons within the unordered list will require the button class to style them.
+- By default the list of buttons will appear vertically on hover from the main button. However, we can use the class of horizontal to make the buttons appear horizontally and the class click-to-toggle to make the button appear on the click of the main button. These classes must be added to the <div> wrapper element.
+   <div class="fixed-action-btn horizontal click-to-toggle">
+      <a class="btn-floating btn-large red">
+         <i class="material-icons">mode_edit</i>
+      </a>
+      <ul>
+         <li>
+            <a class="btn-floating red">
+               <i class="material-icons">insert_chart</i>
+            </a>
+         </li>
+         <li>
+            <a class="btn-floating blue">
+               <i class="material-icons">format_quote</i>
+            </a>
+         </li>
+      </ul>
+   </div>
+
+- We can create the Fixed Action Button Toolbar using the toolbar class on the <div> wrapper. This will create an effect whereby if you click on the button it turns into a toolbar at the bottom of the page and when you click off the toolbar it turns back into the fixed action button.
+   <div class="fixed-action-btn toolbar">
+      <a class="btn-floating btn-large red">
+         <i class="material-icons">mode_edit</i>
+      </a>
+      <ul>
+         <li class="waves-effect waves-light">
+            <a href="#!">
+               <i class="material-icons">insert_chart</i>
+            </a>
+         </li>
+         <li class="waves-effect waves-light">
+            <a href="#!">
+               <i class="material-icons">format_quote</i>
+            </a>
+         </li>
+      </ul>
+   </div>
+
+- Note you cannot have multiple fixed-action-btn on a page as there will be compatibility issues as they will all sit on top of each other on the bottom right hand corner of the page.
+
+- We can use JavaScript (or jQuery) to manipulate our fixed action buttons:
+Opens the toolbar when the page loads.
+   $('.fixed-action-btn').openToolbar();
+Closes the toolbar when the page loads.
+   $('.fixed-action-btn').closeToolbar();
+Opens the standard fixed action buttons when the page loads.
+   $('.fixed-action-btn').openFAB();
+Closes the standard fixed action buttons when the page loads.
+   $('.fixed-action-btn').closeFAB();
