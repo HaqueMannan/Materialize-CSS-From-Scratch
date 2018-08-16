@@ -1,0 +1,118 @@
+Section 2.5 Navbar:
+
+--------------------------------------
+Navbar
+--------------------------------------
+- The <nav> tag automatically gives us the pinkish background and has some materialise styling to create a navbar look and feel. To turn it into an actual navbar we would use a <div> with the class of nav-wrapper. To center the navbar content you can create another <div> element within the <div class="nav-wrapper"> element and give it a class of container.
+- The <a> tag containing the Logo will have a class of brand-logo.
+- The <ul> class will have an id of nav-mobile and a class of right which will move all the nav links to the right of the Logo. Adding the class of hide-on-small-and-down will hide the links when the screen size is small.
+   <nav>
+      <div class="nav-wrapper">
+         <div class="container">
+            <a href="#" class="brand-logo center">Logo</a>
+            <ul id="nav-mobile" class="right hide-on-small-and-down">
+               <li>
+                  <a href="#">Home</a>
+               </li>
+               <li class="active">
+                  <a href="#">About</a>
+               </li>
+               <li>
+                  <a href="#">Contact</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+- To change the colour of the navbar we can add the background colour class to the <nav> element:
+   <nav class="blue darken-4">
+
+- To create the hamburger menu we would use a <a> element with a class of button-collapse and an attribute of data-activates="mobile-nav" (this can be called whatever you want e.g. hamburger-menu etc). Whatever we used on the data-activates attribute must be used as the id on the <nav> element that contains the sidebar menu links. This <nav> element must have a class of side-nav along with the id that is the same as the data-activates attribute value.
+- In order for the sidebar/hamburger menu button to work we need to initialise it with JavaScript/jQuery.
+   <nav>
+      <div class="container">
+         <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Logo</a>
+            <a href="#" class="button-collapse" data-activates="mobile-nav">
+               <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+               <li>
+                  <a href="#">Home</a>
+               </li>
+               <li>
+                  <a href="#">About</a>
+               </li>
+            </ul>
+            <ul class="side-nav" id="mobile-nav">
+               <li>
+                  <a href="#">Home</a>
+               </li>
+               <li>
+                  <a href="#">Services</a>
+               </li>
+            </ul>
+         </div>
+      <div>
+   <nav>
+
+   <script>
+      $(.button-collapse).sideNav();
+   </script>
+
+- Note the first <ul> link will show on large screen but will hide on medium and smaller screen, in which case the hamburger menu button will appear and when clicked this will trigger the ul class with the id that is the same as the data-activates attribute value creating a hamburger menu with links within the sidebar menu. This allows us the possibility to create a different menu items within the hamburger side nav menu compared to the navbar menu items.
+
+- To create a drop down button within a navbar we would use the class dropdown-button and the attribute of data-activates="dropdown-button". To put the icon we would use the <i> element with the class of material-icon and the class of right to push the icon to the right and call on the arrow-drop-down icon from the material icon library.
+   <li>
+      <a href="#!" class="dropdown-button" data-activates="my-dropdown">Dropdown
+         <i class="material-icons right">arrow_drop_down</i>
+      </a>
+   </li>
+
+
+- We can put the <ul> with the id of "my-dropdown" (or whatever the data-activates attribute value is called) either inside or outside of the <nav> element. This can be placed anywhere in the html markup and as long as the <ul> has the id of the data-activates attribute value, then the dropdown will look for that <ul> and activate the links as a dropdown list when we hover over the dropdown button.
+- The <ul> element must also have a class of dropdown-content.
+   <ul id="my-dropdown" class="dropdown-content">
+      <li>
+         <a href="#">Link 1</a>
+      </li>
+      <li>
+         <a href="#">Link 2</a>
+      </li>
+      <li>
+         <a href="#">Link 3</a>
+      </li>
+   </ul>
+
+- We can add buttons to our navbar by using the btn class on our <button> or <a> elements within the navbar <ul> lists.
+
+- To make a link active we would use the class active on the <li> element.
+   <li class="active">
+      <a href="#">Home</a>
+   </li>
+
+- We can add the center class to center an element.
+   <a href="#" class="brand-logo center">Logo</a>
+
+- We can make a navbar fixed on a screen by wrapping it in a <div> element with the class of navbar-fixed.
+   <div class="navbar-fixed">
+      <nav>
+         <div class="nav-wrapper">
+            <div class="container">
+               <a href="#" class="brand-logo center">Logo</a>
+               <ul id="nav-mobile" class="right hide-on-small-and-down">
+                  <li>
+                     <a href="#">Home</a>
+                  </li>
+                  <li class="active">
+                     <a href="#">About</a>
+                  </li>
+                  <li>
+                     <a href="#">Contact</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+   </div>
