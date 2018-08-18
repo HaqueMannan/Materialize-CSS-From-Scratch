@@ -1,0 +1,95 @@
+Section 2.7 The Grid System:
+
+--------------------------------------
+The Grid System
+--------------------------------------
+- A non-responsive grid means that whatever columns we put, they are all going to be the same for all screen sizes i.e. they will not respond to the screen size.
+- All grids must be wrapped in a <div> element with the class of row. 
+- To create a column within our grid we need another <div> element with the class of col along with one of the four screen size (s, m, l, xl). The screen size will propagate up i.e. if we say s1 this will apply to m1, l1 and xl1 screen sizes. 
+- The number relates to how many column i.e s3 is a 3 column container.
+- We require another <div> element with the class of box. 
+
+- Below is an example of a 12 column grid non-responsive grid.
+   <div class="row">
+      <div class="col s1">
+         <div class="box">1</div>
+      </div>
+      <div class="col s1">
+         <div class="box">2</div>
+      </div>
+      <div class="col s1">
+         <div class="box">3</div>
+      </div>
+      <div class="col s1">
+         <div class="box">4</div>
+      </div>
+      <div class="col s1">
+         <div class="box">5</div>
+      </div>
+      <div class="col s1">
+         <div class="box">6</div>
+      </div>
+      <div class="col s1">
+         <div class="box">7</div>
+      </div>
+      <div class="col s1">
+         <div class="box">8</div>
+      </div>
+      <div class="col s1">
+         <div class="box">9</div>
+      </div>
+      <div class="col s1">
+         <div class="box">10</div>
+      </div>
+      <div class="col s1">
+         <div class="box">11</div>
+      </div>
+      <div class="col s1">
+         <div class="box">12</div>
+      </div>
+   </div>
+
+- The grid can have a maximum of 12 columns, therefore we can have any number of columns as long as it adds up to a total of 12 columns i.e we can have 3 x 4 column grid (3x4=12) for example:
+   <div class="row">
+      <div class="col s4">
+         <div class="box">1</div>
+      </div>
+      <div class="col s4">
+         <div class="box">2</div>
+      </div>
+      <div class="col s4">
+         <div class="box">3</div>
+      </div>
+   </div>
+- Note the class col s4 on our div - the number indicates the number of columns this <div> wrapper will take up for its contents.
+
+- These columns will stay the same and will not collapse under each other (responsively) under the non-responsive grid regardless of the screen size.
+
+- To create a responsive grid we would just add the various size screens and the number of columns. Below is an example of a very responsive grid.
+   <div class="row">
+      <div class="col xl9 l8 m6 s12">
+         <div class="box">1</div>
+      </div>
+      <div class="col xl3 l4 m6 s12">
+         <div class="box">2</div>
+      </div>
+   </div>
+
+- We can use the push and pull class to switch the position of contents. We would use the push to move the item to the right followed by the screen size and column width. Pull will move the content to the left followed by the screen size and column width.
+- Below is an example of pull and push:
+   <div class="row">
+      <div class="col s7 push-s5">
+         <div class="box">1</div>
+      </div>
+      <div class="col s5 pull-s7">
+         <div class="box">2</div>
+      </div>
+   </div>
+
+- Finally you can offset grid items i.e. if you only want to use a 6 column <div> only and do not wan to use the full 12 column grid but you wish to move the 6 column grid to the middle, you would use the offset class to achieve this.
+   <div class="row">
+      <div class="col s6 offset-s3">
+         <div class="box">LOGIN</div>
+      </div>
+   </div>
+- What this did is create a 6 column <div> but offset/pushed it across by 3 columns to center the <div> element on the html page.
