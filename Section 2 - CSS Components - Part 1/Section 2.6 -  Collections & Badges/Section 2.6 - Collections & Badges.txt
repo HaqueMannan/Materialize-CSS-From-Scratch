@@ -1,0 +1,75 @@
+Section 2.6 Collections & Badges:
+
+--------------------------------------
+Collections & Badges
+--------------------------------------
+- To create a collection we need to add a class of collection to the <ul> element and each <li> element within the unordered list will have the class of collection-item.
+   <ul class="collection">
+      <li class="collection-item">First Item</li>
+      <li class="collection-item">First Item</li>
+   </ul>
+
+- We can also use the class collection with-header on the <ul> and the class collection-header on the <li> to style a collection with a header.
+   <ul class="collection with-header">
+      <li class="collection-header">
+         <h4>Items</h4>
+      </li>
+      <li class="collection-item">First Item</li>
+      <li class="collection-item">Second Item</li>
+      <li class="collection-item">Third Item</li>
+      <li class="collection-item">Fourth Item</li>
+   </ul>
+
+- We can add badges on our list items. Badges are typically used to display number of posts, number of views, comments, likes etc. they are represented in a box with a number. To create a badge we would give the <span> element the class of badge. The class badge new will give a teal background with the text new.
+   <div class="collection">
+      <a href="#" class="collection-item">Item</a>
+      <a href="#!" class="collection-item">
+         <span class="badge">44</span>Item
+      </a>
+      <a href="#!" class="collection-item">
+         <span class="badge">3</span>Item
+      </a>
+   </div>
+
+- We would use the class secondary-content if we wanted to have a collection list with secondary contents i.e. the secondary content being the X icon at the side of the primary content-item.
+   <ul class="collection">
+      <li class="collection-item">
+         <div>First Item
+            <a href="#" class="secondary-content">
+               <i class="material-icons">close</i>
+            </a>
+         </div>
+      </li>
+      <li class="collection-item">
+         <div>Second Item
+            <a href="#" class="secondary-content">
+               <i class="material-icons">close</i>
+            </a>
+         </div>
+      </li>
+   </ul>
+
+- The avatar class allows us to add an icon or image as an avatar next to our collection item on the left. We can use the colour class and shape class to style the avatar icon/image.
+   <ul class="collection">
+      <li class="collection-item avatar">
+         <i class="material-icons blue circle">contacts</i>
+         <span class="title">John Doe</span>
+         <p>jdoe@gmail.com <br> 555-555-5555</p>
+         <a href="#" class="secondary-content">
+            <i class="material-icons">grade</i>
+         </a>
+      </li>
+   </ul>
+
+- We can also add badges to our dropdown list items using the class of badge.
+   <a href="#!" class="btn dropdown-button" data-activates="dropdown-list">Dropdown
+      <i class="material-icons">arrow_drop_down</i>
+   </a>
+
+   <ul class="dropdown-content" id="dropdown-list">
+      <li>
+         <a href="">Item 1
+            <span class="badge">44</span>
+         </a>
+      </li>
+   </ul>
