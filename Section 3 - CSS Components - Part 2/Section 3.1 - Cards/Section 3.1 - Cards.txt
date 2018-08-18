@@ -1,0 +1,117 @@
+Section 3.1 Cards:
+
+--------------------------------------
+Card
+--------------------------------------
+- To create a card within Materialize we require 2 <div> elements. The first <div> element will have the class of card while the other will have a class of card-content. This will give the simplest card style we can have with Materialize.
+- The card-content class gives the content of the card the padding and styling to the content.
+   <div class="card">
+      <div class="card-content">
+         <p>Card Text</p>
+      </div>
+   </div>
+
+- We can add colour to the background of our card by using the colour class on the first <div> element:
+   <div class="card blue darken-2">
+      <div class="card-content white-text">
+         <p>Card Text</p>
+      </div>
+   </div>
+
+- The card-title class gives the element a more prominent header look within the card.
+   <div class="card">
+      <div class="card-content">
+         <span class="card-title">Heading</span>
+      </div>
+   </div>
+
+- The card-action class allows you to create an actions area which styles your links in upper case, orange text and a line break above. This is commonly used for styling the Read More action.
+   <div class="card-action">
+      <a href="#">Read More</a>
+   </div>
+
+- If you want to add an image to your card you would need to create a <div> wrapper with the class of card-image which will wrap around the <img> element holding your image.
+   <div class="card">
+      <div class="card-image">
+         <img src="image.png">
+      </div>
+      <div class="card-content">
+         <p>Card Text</p>
+      </div>
+   </div>
+
+- We can add a floating button on our card by using th standard button classes from Section 2.3 - Buttons & Icons and Section 2.4 - Floating & Fixed Action Buttons lessons.
+   <a class="btn-floating halfway-fab waves-effect waves-light blue">
+      <i class="material-icons">add</i>
+   </a>
+- Note: The halfway-fab class stands for halfway fixed action button.
+
+- The horizontal class allows you to add content horizontally i.e. you can have your image on the side of the card text. We would require a <div> element with the class of card-stacked in order to stack the card contents horizontally.
+   <div class="card horizontal">
+      <div class="card-image">
+         <img src="image.jpeg">
+      </div>
+      <div class="card-stacked">
+         <div class="card-content">
+            <span class="card-tile">Horizontal Title</span>
+            <p>Horizontal Card Text Content</p>
+         </div>
+      </div>
+   </div>
+
+- We can activate card contents using the activator class on the element which will activate the reveal of the card content. The card content to reveal on activation requires a <div> wrapper with the class of card-reveal which will initially hide the content and then reveal it when the element with the class of activate is clicked to trigger to reveal content.
+   <a href="#" class="activator">Read More</a>
+   <div class="card-reveal">
+      <p>Reveal Card Text Content</p>
+   </div>
+
+- To create a tabbed card we would need to use a <div> wrapper with the class of card-tabs. We would then have an <ul> with <li> elements for each of the tabs. The <ul> will require the class of tabs and tabs-width-fixed, while each <li> element will require the class of tab.
+- Each <li> elements require an <a> links element with a unique id. This is important because each <div> element containing the tab content will need id that corresponds to the <a> links.
+   <div class="card-tabs">
+      <ul class="tabs tabs-width-fixed">
+         <li class="tab">
+            <a href="#tab1">Tab 1</a>
+         </li>
+         <li class="tab">
+            <a href="#tab2">Tab 2</a>
+         </li>
+      </ul>
+   </div>
+   <div class="card-content">
+      <div id="tab1">Content for Tab 1</div>
+      <div id="tab2">Content for Tab 2</div>
+   </div>
+
+- Tabs by default are white. The class tabs-transparent will make the tabs background transparent. We can add background colour to the card-content and allow the Tabs have a transparent background which will show the colour of the card-content element.
+   <div class="card orange darken white-text">
+      <div class="card-content">
+         <span class="card-title">Tabbed Card</span>
+      </div>
+      <div class="card-tabs">
+         <ul class="tabs tabs-width-fixed tabs-transparent">
+            ...
+         <ul>
+      </div>
+      <div class="card-content black">
+         <div id="tab1">Content for Tab 1</div>
+      </div>
+   </div>
+
+- Materialize allows you to change the sizing of the card using classes. We can change the size to either small, medium or large. In our <div> element which has the card class we can add the following classes to change the overall sizing of the card.
+   <div class="card small"></div>
+   <div class="card medium"></div>
+   <div class="card large"></div>
+
+- Card Panels are the same as the standard card i.e. it creates a border and shadows, however, it only requires a single <div> element with the class of card-panel c.f. the above which required two <div> element with the card and card-content classes. 
+   <div class="card-panel">
+      <p>Card Text</p>
+   </div>
+- If you only want a border and padding and stuff like that you should probably use card-panel instead of the card and card-content.
+
+- Note that shadow classes are separate from card and they can be placed on any element i.e. buttons, images etc.
+- To add shadows we would use the z-depth- followed by a number between 1 to 4 class. The number dictates how prominent the shadow depth will appear.
+   <div class="card-panel z-depth-3">
+
+- Note you can mix and match the above classes to format/create your own card styles.
+
+
