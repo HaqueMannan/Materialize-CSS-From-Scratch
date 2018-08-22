@@ -1,0 +1,31 @@
+Section 3.2 Breadcrumb & Footer:
+
+--------------------------------------
+Breadcrumb & Footer
+--------------------------------------
+- A breadcrumb is very similar to a navbar i.e. it is structured in the same way as a navbar. Each <a> link within the <nav> requires the class of breadcrumb which format and spread the links out and adds the > icon. The last link is automatically lighter than the other links.
+   <nav class="grey">
+      <div class="nav-wrapper">
+         <div class="container">
+            <div class="col s12">
+               <a href="#" class="breadcrumb">Home</a>
+               <a href="#" class="breadcrumb">Users</a>
+               <a href="#" class="breadcrumb">Brad</a>
+            </div>
+         </div>
+      </div>
+   </nav>
+
+- To create a footer we can use the page-footer class on the <footer> element. We can also create a copyright in the footer by creating a <div> element with the class footer-copyright.
+
+   <footer class="page-footer grey darken-3">
+      <div class="container">
+         ...
+      </div>
+      <div class="footer-copyright grey darken-2">
+         <div class="container">
+            Copyright &copy; 2018
+            <a href="#" class="grey-text text-lighten-3 right">Terms & Conditions</a>
+         </div>
+      </div>
+   </footer>
