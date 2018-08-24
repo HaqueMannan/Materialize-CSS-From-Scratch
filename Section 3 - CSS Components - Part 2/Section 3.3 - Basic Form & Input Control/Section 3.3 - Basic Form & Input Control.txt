@@ -1,0 +1,56 @@
+Section 3.3 Basic Form & Input Control:
+
+--------------------------------------
+Basic Form & Input Control
+--------------------------------------
+- In Materialize you do not need to do much to the form fields as they have basic CSS design applied to them without the classes (exception of the <textarea> box).
+- The <div> wrapper containing the input and label can have the class of input-field.
+   <div class="input-field">
+      <input placeholder="Name" id="name" type="text">
+      <label for="name">Name</label>
+   </div>
+
+- The class materialize-textarea should be used on the <textarea> element to style the textarea box.
+   <textarea placeholder="Message" id="message" class="materialize-textarea></textarea>
+
+- To make the field an inline field we would use the inline field class.
+   <div class="input-field inline">
+      ...
+   </div>
+
+- To prefix a icon next to the input field we would use the class prefix on the <i> element that contains the materialize-icon class.
+   <div class="input-field">
+      <i class="materialize-icons prefix">phone</i>
+      <input id="phone" type="tel">
+      <label for="phone">Phone Number</label>
+   </div>
+
+- The class validate will add validation styling i.e. the line colour becomes red when a valid email is not entered.
+- We can add success/failure message using the data-error and data-success attributes on the <label> element.
+   <<div class="input-field">
+      <input placedholder="Email" id="email" type="email" class="validation">
+      <label data-error="Invalid" data-success="Valid" for="email">Email</label>
+   </div>
+
+- In Materialize when you use <select> lists, you must initialize it using jQuery.
+   $('select').material.select();
+
+- The class width-gap formats the radio button from the default materialize radio button styling.
+   <p>
+      <input class="width-gap" type="radio" name="gender" id="male" checked>
+      <label for="male">Male</label>
+   </p>
+   <p>
+      <input class="width-gap" type="radio" name="gender" id="female">
+      <label for="female">Female</label>
+   </p>
+
+- We can add a different effect to check boxes using the class filled-in.
+   <p>
+      <input class="filled-in" type="checkbox" name="tech" id="html">
+      <label for="html">HTML</label>
+   </p>
+   <p>
+      <input disabled type="checkbox" name="tech" id="CSS">
+      <label for="css">CSS</label>
+   </p>
