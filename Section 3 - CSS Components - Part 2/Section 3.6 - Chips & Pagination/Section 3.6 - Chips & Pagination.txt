@@ -1,0 +1,63 @@
+Section 3.6 Chips & Pagination:
+
+--------------------------------------
+Chips & Pagination
+--------------------------------------
+- Chips in Materialize are basically tags styled as chips. You would commonly see chips/tags containing keywords for a blog post. To create a chip in Materialize we would use the class of chip on the <div> wrapper element.
+   <div class="chip">
+      Web Development
+   </div>
+
+- We can also make our chips/tags disappear when we close them out. In order to do this we require the <i> element which will contain the class material-icon to select the close icon and we also require the class of close so that when we click the icon the chips will close.
+   <div class="chip">
+      Web Development
+      <i class="close material-icons">close</i>
+   </div>
+
+- We can use images with our chips - this also allows for avatars in our chips.
+   <div class="chip">
+      <img src="img/img1.jpg">John Doe
+   </div>
+
+- We can have inputs where we can have autocomplete and add chips to the input. A good use for this would be a blog post form where we are adding the tags from a list or a database list that you would want to come up automatically.
+- All we require is a <div> with the class of chips-input and the use of JavaScript/jQuery for it to work.
+   <div class="chips-input"></div>
+
+   <script>
+      $('.chips-input').material_chip({
+         placeholder: 'Enter a tag',
+         secondaryPlaceholder: '+tag',
+         autocompleteOptions: {
+            data: {
+               'html': null,
+               'css': null,
+               'javascript': null
+            }
+         }
+      });
+
+      // ADD CHIP EVENT TO THE JAVASCRIPT CONSOLE
+      $('.chips-input').on('chip.add', function (e, chip) {
+         console.log(`You added a chip - ${chip.tag}`);
+      });
+   </script>
+
+- To add a pagination using Materialize we need the class of pagination added to the <ul>. We would need at least 2 <li><a> elements for the previous and next buttons and the remainder <li><a> elements would be the page numbers. We can use the disable class on the <a> element to disable the link and also use the active class to make an item active.
+   <ul class="pagination">
+      <li class="disabled">
+         <a href="#!">
+            <i class="material-icons">chevron_left</i>
+         </a>
+      </li>
+      <li class="waves-effect">
+         <a href="#!">1</a>
+      </li>
+      <li class="waves-effect active">
+         <a href="#!">2</a>
+      </li>
+      <li>
+         <a href="#!">
+            <i class="material-icons">chevron_right</i>
+         </a>
+      </li>
+   </ul>
