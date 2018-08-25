@@ -1,0 +1,77 @@
+Section 3.7 Preloaders:
+
+--------------------------------------
+Preloaders
+--------------------------------------
+- Preloaders are animated spinners. There are a few classes required to create a preloader spinner.
+
+- To create a progress bar in Materialize we have two types, determinate and indeterminate. We require a nested <div> with one having the class of progress and the second <div> element will have a class either determinate or indeterminate. If it has a class of determinate we need to give it a style attribute to set th width of how full we want the progress bar.
+   <div class="progress">
+      <div class="determinate" style="width=70%"></div>
+   </div>
+
+   <div class="progress">
+      <div class="indeterminate"></div>
+   </div>
+
+- To create a spinning circle preloader the markup would look like:
+   <div class="preloader-wrapper active">
+      <div class="spinner-layer spinner-red-only">
+         <div class="circle-clipper left">
+            <div class="circle"></div>
+         </div>
+         <div class="gap-patch">
+            <div class="circle"></div>
+         </div>
+         <div class="circle-clipper right">
+            <div class="circle"></div>
+         </div>
+      </div>
+   </div>
+
+- To make the preloader smaller or larger we would add the class small or big on the <div> with the preloader-wrapper class.
+   <div class="preloader-wrapper small active">
+   <div class="preloader-wrapper big active">
+
+- To change the colour of the spinner we would add the spinner- followed by the colour followed by -only (e.g. spinner-blue-only) class to the <div> element with the spinner-layer class.
+   <div class="spinner-layer spinner-red-only">
+   <div class="spinner-layer spinner-yellow-only">
+
+- To make the spinner flash different colours the markup would be the same as the above however we would have multiple spinner-layer markup with the various colours. Notice the spinner-colour class no longer has the -only in the syntax.
+   <div class="preloader-wrapper active">
+      <div class="spinner-layer spinner-green">
+         <div class="circle-clipper left">
+            <div class="circle"></div>
+         </div>
+         <div class="gap-patch">
+            <div class="circle"></div>
+         </div>
+         <div class="circle-clipper right">
+            <div class="circle"></div>
+         </div>
+      </div>
+
+      <div class="spinner-layer spinner-yellow">
+         <div class="circle-clipper left">
+            <div class="circle"></div>
+         </div>
+         <div class="gap-patch">
+            <div class="circle"></div>
+         </div>
+         <div class="circle-clipper right">
+            <div class="circle"></div>
+         </div>
+      </div>
+
+      <div class="spinner-layer spinner-blue">
+         <div class="circle-clipper left">
+            <div class="circle"></div>
+         </div>
+         <div class="gap-patch">
+            <div class="circle"></div>
+         </div>
+         <div class="circle-clipper right">
+            <div class="circle"></div>
+         </div>
+      </div>
+   </div>
