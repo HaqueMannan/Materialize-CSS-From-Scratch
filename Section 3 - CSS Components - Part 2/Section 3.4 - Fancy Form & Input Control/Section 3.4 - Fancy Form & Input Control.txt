@@ -1,0 +1,78 @@
+Section 3.4 Fancy Form & Input Control:
+
+--------------------------------------
+Fancy Form & Input Control
+--------------------------------------
+- HTML does not have an element for a switch input, however, we can use Materialize to create a switch for our applications. We would use a <div> element with the class of switch to wrap our html elements that will create our switch button. There is a specific structure in order to create a switch:
+   <div class="switch">
+      <label>
+         Disable
+         <input type="checkbox" checked>
+         <span class="lever"></span>
+         Enable
+      </label>
+   </div>
+
+- Materialize has a class of range-field which adds a materialize UI on a range picker (i.e. a number popping above the input slide when you slide the range).
+   <p class="range-field">
+      <input type="range" min=0 max=100>
+   </p>
+
+- In order to create a datepicker we require the class of input-field on the <div> wrapper and the class on datepicker on the <input> element. We then require jQuery/Javascript to initialise the datapicker.
+   <div class="input-field">
+      <input class="datepicker" type="text" id="date">
+      <label for="date">Choose a Date</label>
+   </div>
+
+   <script>
+      $('.datepicker').pickadate({
+         selectMonths: true,
+         selectYears: 15,
+         closeOnSelect: true
+      });
+   </script>
+- There are a couple of options such as selectMonths, selectYears and closeOnSelect within the pickdate() function.
+
+- Materialize also has a time-picker which is similar to the datepicker. We would use the class timpicker to the <input> element and then initialise the timepiker using jQuery.
+   <div class="input-field">
+      <input class="timepiker" type="text" id="date">
+      <label for="date">Choose a Time</label>
+   </div>
+
+   <script>
+      $('.timepiker').pickatime({
+         default: 'now',
+         twelvehour: 'false',
+         donetext: 'OK',
+         cleartext: 'Clear',
+         canceltext= 'Cancel',
+         autoclose= 'true'
+      });
+   </script>
+
+- We can have a character counter to show the user the number of characters in a text field using the data-length attribute and Materialize will style this where the text field will turn red when exceeding maximum character length.
+   <div>
+      <input id='name' type='text' data-lenght='20'>
+      <label for='name'>Enter Name</label>
+   </div>
+
+- To create an autocomplete input area in materialize we require the autocomplete class on our <input> element and then use jQuery to initialise the autocomplete list. What appears in our autolist will depen on our array list.
+   <div>
+      <input type='text' id='cars' class='autocomplete'>
+      <label for='cars'>Type a Car Make</label>
+   </div>
+
+   <script>
+      $(.autocomplete).autocomplete({
+         data: {
+            "Audi": null,
+            "BMW": null,
+            "Chevrolet": null,
+            "Ford": null,
+            "Honda": null,
+            "Mercedes-Benz": null
+         }
+         limit: 20,
+         minLength: 2
+      })
+   </script>
