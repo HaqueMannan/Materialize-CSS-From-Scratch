@@ -1,0 +1,35 @@
+Section 3.5 Tables & Media:
+
+--------------------------------------
+Tables & Media
+--------------------------------------
+- Materialize will provide a default style for tables which require no classes to your HTML elements, however we can use the class of striped to give your tables a stripe style of white and light grey rows.
+   <table class="stripe">
+      ...
+   </table>
+
+- We can add the class bordered to give a line underneath each row; a class of highlight which will highlight light grey when we hover over a row; and a class of responsive-table which will change the orientation of the table from a vertical to a horizontal table when the screen size changes.
+   <table class="bordered highlight responsive-table">
+      ...
+   </table>
+
+- To make a image responsive in size i.e. fit within its container regardless of the screen size we must give it a class of responsive-img else the image will not fit within the screen and will go outside its container even if you used the grid system.
+   <div class="row">
+      <div class="col s6">
+         <img src="img/img1.jpeg" alt="" class="responsive-img">
+      </div>
+   </div>
+
+- We can make circular images by using the class of circle
+   <img src="img/img1.jpeg" alt="" class="responsive-img circle">
+
+- We can create a responsive-video (whether the video is embedded or local) to fit within its container and not go across the screen by wrapping the embedded video within a <div> element with the class of video-container:
+Embedded Video
+   <div class="video-container">
+      <iframe width="835" height="480" src="//www.youtube.com/embed/videoRef" frameborder=0 allowfullscreen></iframe>
+   </div>
+
+Video from Local Folder
+   <div class="video-container">
+      <source src="somevideo.mp4" type="video/mp4">
+   </div>
