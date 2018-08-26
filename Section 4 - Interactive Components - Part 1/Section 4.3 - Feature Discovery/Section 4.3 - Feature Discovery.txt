@@ -1,0 +1,38 @@
+Section 4.3 Feature Discovery:
+
+--------------------------------------
+Feature Discovery
+--------------------------------------
+- The Featured Discovery Widget in Materialize allows you to have a cool discovery area at the bottom corner of your web page.
+
+- To create a Feature Discovery Widget we would need two <a> element to act as the button to open and close the feature discovery.
+   <a class="wave-effect waves-light btn" onclick="$('.tap-target').tapTarget('open')">Open Tap Target</a>
+   <a class="wave-effect waves-light btn" onclick="$('.tap-target').tapTarget('close')">Close Tap Target</a>
+- Notice we created an onclick event on our <a> link button using jQuery rather than going to the <script> area of our markup.
+
+- We would then need to create the floating circular button to sit at the bottom right hand corner of our page using the markup below.
+   <div class="fixed-action-btn">
+      <a id="menu" class="btn btn-floating btn-large cyan">
+         <i class="material-icons">menu</i>
+      </a>
+   </div>
+
+- We would then need to create the feature discovery that will pop out of the circular button we created above.
+- We need two wrap <div> element, one with the class of tap-target-wrapper and the other with the class of tap-target and attribute of data-activates and the value should match the id of the feature discovery button above e.g. "menu".
+- We would then have a third <div> element which will hold the feature discovery content i.e. the <h> and <p> elements. This will need the class of "tap-target-content"
+- We then require a <div> element which will wrap an <a> element. We require this to have a button in the open state (the above button is for the close state).
+   <div class="tap-target-wrapper">
+      <div class="tap-target cyan" data-activates="menu">
+         <div class="tap-target-content white-text">
+            <h5>Hello World</h5>
+            <p class="white-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi provident cupiditate dolores. Impedit cum asperiores a aspernatur ullam esse id!</p>
+         </div>
+      </div>
+      <div class="tap-target-wave">
+         <a class="btn btn-floating btn-large red tap-target-origin">
+            <i class="material-icons">close</i>
+         </a>
+      </div>
+   </div>
+
+Important Note: Materialize does not have the correct markup in their documentation.
