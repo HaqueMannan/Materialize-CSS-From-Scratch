@@ -1,0 +1,54 @@
+Section 4.1 Carousel:
+
+--------------------------------------
+Carousel
+--------------------------------------
+- To create a carousel we need a <div> wrapper with the class of carousel and each <a> element wrapping the <img> elements require the class of carousel-item. Note, you do not need to put a href for the <a> element but it is good practice to have something within the href to give it an identifier/pointer when you hover over the <a> element.
+- The carousel, just like most of the widgets, requires JavaScript/jQuery to initialise the widget.
+   <div class="carousel">
+      <a class="carousel-item" href="#one">
+         <img src="img/img1.jpg">
+      </a>
+      <a class="carousel-item" href="#two">
+         <img src="img/img2.jpg">
+      </a>
+   </div>
+
+   <script>
+      $('.carousel').carousel();
+   </script>
+
+- To create a full width/slider carousel we require an additonal class on the <div> wrapper of carousel-slider. The slider effect is the same as the above once the JavaScript/jQuery is used.
+   <div class="carousel">
+      <a class="carousel-item" href="#one">
+         <img src="img/img1.jpg">
+      </a>
+      <a class="carousel-item" href="#two">
+         <img src="img/img2.jpg">
+      </a>
+   </div>
+- To change the slide effect to the slider (i.e. it slides without the image getting smaller) we would use the following JavaScript/jQuery code:
+   $('.carousel-slider').carousel({ fullWidth: true });
+
+- To add the little dot indicators on your carousel, we would need to add the class data-indicators="true" to our <div> wrapper element.
+   <div class="carousel carousel-slider center" data-indicators="true">
+      ...
+   </div>
+
+- We can also have a content slider. Note the carousel-fixed-item class fixes the element e.g. button at the bottom.
+   <div class="carousel carousel-slider center" data-indicators="true">
+      <div class="carousel-item red white-text" href="#one!">
+         <h2>Panel One</h2>
+         <p>This is panel one</p>
+         <div class="carousel-fixed-item center">
+            <a class="btn black">button</a>
+         </div>
+      </div>
+      <div class="carousel-item red white-text" href="#Two!">
+         <h2>Panel Two</h2>
+         <p>This is panel Two</p>
+         <div class="carousel-fixed-item center">
+            <a class="btn black">button</a>
+         </div>
+      </div>
+   </div>
