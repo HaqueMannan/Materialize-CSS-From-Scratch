@@ -1,0 +1,58 @@
+Section 4.4 Dialogues (Toasts & Tooltips):
+
+--------------------------------------
+Dialogues (Toasts & Tooltips)
+--------------------------------------
+- Toasts in Materialize are like alerts which popup and then dismiss after a certain duration while tooltips are tips on hover over a button or element.
+- Toasts require JavaScript/jQuery for them to work. Tooltips use classes and data attributes on the element.
+
+
+--------------------------------------
+Toasts
+--------------------------------------
+- To create a toast we simply require an <a> link element with an id. We will use this id with vanilla JavaScript or jQuery to trigger an onclick event to call the toast.
+   <a id="toast1" class="btn">Show Toast</a>
+- Note: we could create the onclick event on the <a> element but using an id is the better way of doing things.
+
+- The JavaScript/jQuery syntax for initialising the onclick event for the toast.
+Vanilla JavaScript Syntax:
+   <script>
+      document.getElementById('toast1').addEventListener('click', function () {
+         Materialize.toast('I am toast', 3000);
+      });
+   </script>
+
+jQuery Syntax:
+   <script> 
+      $('#toast1').click(function () {
+         Materialize.toast('I am toast', 3000);
+      });
+   </script>
+
+- The first parameter of the Materialize.toast() function will output the text you wish to display.
+- The second parameter resembles the time before the toast will dismiss. This is in milliseconds (1000ms = 1s). If there is no value then the toast will stay on the screen indefinitely until the user swipes it away.
+- To make the toast rounded we would add a third parameter to the Materialize.toast() function of rounded.
+   Materialize.toast('I am toast', 3000, "rounded");
+- We can add a fourth parameter of a function to give a callback alert message within the browser when the toast goes away. 
+- Note: that we can pass an empty string for the third parameter if we do not wish for the toast to be rounded.
+   Materialize.toast('I am toast', 3000, "", function(){alert('Toast Dismissed!')});
+
+- We can create toast without assigning it to a button i.e. JavaScript to run when the page loads by adding only the Materialize.toast() function.
+   <script>
+         Materialize.toast('I am toast', 3000);
+   </script>
+
+- To remove/dismiss all toasts we can use JavaScript setTimeout() function to do something after a set amount of time. The syntax below will call on the toast.remove() function after two seconds when the page loads.
+   setTimeout(function () {
+      Materialize.Toast.removeAll();
+   }, 2000);
+
+
+--------------------------------------
+Tooltips
+--------------------------------------
+- To create a tooltip we require a <a> link button with the class of tooltipped.
+- To add content for the tooltip we require the attribute of data-tooltip.
+- To position the tooltip either top, bottom, left or right we require the attribute of data-position.
+- To add a delay to the tooltip appearing when we click the button we require the attribute of data-delay. The delay value is recorded in milliseconds.
+   <a class="btn tooltipped" data-delay="1000" data-position="bottom" data-tooltip="I am a 1 second delayed tooltip">Bottom Tooltip</a>
