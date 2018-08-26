@@ -1,0 +1,47 @@
+Section 4.5 Material Box & Slider:
+
+--------------------------------------
+Material Box & Slider
+--------------------------------------
+- The Material Box Widget is like a lightbox. The Slider Widget is similar to the Carousel Widget but slightly different in styling and sliding through the images/content.
+- Sliders require JavaScript/jQuery in order for it to work.
+
+
+--------------------------------------
+Material Box
+--------------------------------------
+- To create a Material Box we would add the class materialboxed and a width attribute to our <img> element.
+- To add a caption we would simply add a attribute of data-caption and enter our caption value.
+   <div class="col s12 m6">
+      <img src="img/img1.jpg" class="materialboxed" width="100%" data-caption="Caption Text">
+   </div>
+
+- When you hover over the image you should see the image slightly fade out and a magnify cursor appear. When we click the image this should enlarge the image and grey the surrounding background (i.e. a lightbox effect).
+- If we added a caption this will appear at the bottom of the picture when we enlarge the image.
+
+
+--------------------------------------
+Slider
+--------------------------------------
+- To create a slider we require a <div> wrapper element with the class of slider and the <ul> requires a class of slides. The <div> element that wraps the content header and body requires a class of caption.
+- Note we can add align classes (e.g. center-align, left-align, right-align) on the <div> element that is wrapping the text content.
+   <div class="slider">
+      <ul class="slides">
+         <li>
+            <img src="img/img3.jpg">
+            <div class="caption left-align>
+               <h3 class="black-text">Caption</h3>
+               <h5 class="black-text">Some Random Text</h5>
+            </div>
+         </li>
+      </ul>
+   </div>
+
+- We require JavaScript/jQuery to initialise the slider.
+   $('.slider').slider({
+      indicators: true,
+      height: 400,
+      transition: 500,
+      interval: 6000
+   });
+- We have some options for our slide such as having an indicator dots at the bottom, change the height of the image, change the transition speed and finally the interval in which the image changes. 
