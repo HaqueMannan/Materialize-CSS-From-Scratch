@@ -1,0 +1,50 @@
+Section 4.2 Collapsible:
+
+--------------------------------------
+Collapsible
+--------------------------------------
+- The Collapsible Widget in Materialize allows you to create an Accordion/Expandable (Accordion only allows one list item to be collapse at a time while expandable allows multiple list items to be open).
+
+- To create a collapsible we require a <ul> element with <li> elements. Within the <li> element we require two <div> element, one for the header and the second has the body of the content.
+
+- The <ul> element requires the class of collapsible and an attribute of data-collapsible.
+- Depending on whether we wish to create an accordion or an expandable we would need to specify this within the data-collapsible attribute value.
+- The first <div> element requires the class of collapsible-header.
+- The second <div> element requires the class of collapsible-body.
+
+Example of an Accordion Collapsible Widget markup:
+   <ul class="collapsible" data-collapsible="accordion">
+      <li>
+         <div class="collapsible-header">
+            <i class="material-icons">group_work</i>First
+         </div>
+         <div class="collapsible-body">
+            <span>This is the first area</span>
+         </div>
+      </li>
+   </ul>
+
+Example: of an Expandable Collapsible Widget markup:
+   <ul class="collapsible" data-collapsible="expandable">
+      <li>
+         <div class="collapsible-header">
+            <i class="material-icons">group_work</i>First
+         </div>
+         <div class="collapsible-body">
+            <span>This is the first area</span>
+         </div>
+      </li>
+   </ul>
+
+- By default all the list items within the collapsible will be closed when the page is loaded. To make one open/active we would use the class active on first <div> element of the <li> element we wish to have open when the page loads.
+   <div class="collapsible-header active">
+      <i class="material-icons">group_work</i>First
+   </div>
+
+- We can also add JavaScript/jQuery even when the collapsible item is open/close.
+   <script>
+      $('.collapsible').collapsible({
+         onOpen: function () { alert('Open') },
+         onClose: function () { alert('Close') }
+      });
+   </script>
