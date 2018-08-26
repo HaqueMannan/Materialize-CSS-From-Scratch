@@ -1,0 +1,53 @@
+Section 4.6 Modal:
+
+--------------------------------------
+Modal
+--------------------------------------
+- A Modal is where we have a button and when clicked a popup with some content appears on the screen.
+- Every Modal requires a trigger. We would use a <a> link with the class of modal-trigger and give it a href value which will link to the Modal <div> element that has the same id value to trigger the Modal appearing on the screen.
+   <a class="btn modal-trigger" href="#modal1">Modal</a>
+
+- To create the modal itself we require a <div> element with the class of modal that wraps the modal content. This will make the content disappear. This <div> element will also need the id that is the same as the modal-trigger button href value.
+- Finally, we will need a <div> element to wrap around the button to close the modal once it is open. The <div> will have a class of modal-footer while the <a> link element will have the class of modal-action and modal-close.
+   <div id="modal1" class="modal">
+      <div class="modal-content">
+         <h4>Modal Header</h4>
+         <p>Modal Body Content</p>
+      </div>
+      <div class="modal-footer">
+         <a class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+      </div>
+   </div>
+
+- In order for the Modal to work we need to initialise it with JavaScript/jQuery.
+   $('.modal').modal({
+      dismissible: true,
+      inDuration: 300,
+      outDuration: 200,
+      ready: function (modal, trigger) {
+         console.log('Modal Opened', modal, trigger);
+      }
+   });
+- Note: we have options for the modal such as dismissible (this prevents the closing of the modal when clicking outside the box), inDuration and outDuration (speed in which the Modal opens and closes). We can also add a callback for when it opens.
+
+- We can create a Modal that has a fixed footer which would make the footer fixed at the bottom of the modal and the content above the footer scrollable if the modal content exceeds below the footer. To create this effect we would add an additional class of modal-fixed-footer to our <div> modal wrapper element.
+   <div id="modal" class="modal modal-fixed-footer">
+      <div class="modal-content">
+         <h4>Modal Header</h4>
+         <p>Very Long Modal Body Content Stretching Below the Fixed Footer</p>
+      </div>
+      <div class="modal-footer">
+         <a class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+      </div>
+   </div>
+
+- We can also create a bottom sheet modal by adding the class bottom-sheet to the <div> modal wrap element.
+   <div id="modal" class="modal bottom-sheet">
+      <div class="modal-content">
+         <h4>Modal Header</h4>
+         <p>Modal Body Content</p>
+      </div>
+      <div class="modal-footer">
+         <a class="modal-action modal-close btn-flat">Ok</a>
+      </div>
+   </div>
