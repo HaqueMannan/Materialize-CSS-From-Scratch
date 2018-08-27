@@ -1,0 +1,51 @@
+Section 5.5 Tabs:
+
+--------------------------------------
+Tabs
+--------------------------------------
+- Tabs are quite easy to implement within Materialize CSS. 
+- To create Tabs we require the grid system to hold our tabs and tab content and so we will need a <div class="row"> element wrapping our tab. 
+- The first <div class="col s12"> element will wrap around the <ul> containing the tab links. This <ul> element will have the class of tabs. Each <li> element will have a class of tab and col class and this will wrap an <a> link element which will have a href attribute value that will reference the tab content it relates to.
+- Each tab content will be wrapped around a <div> that has an id which is reference in the <a> links elements above as well as a column size class, usually col s12.
+
+   <div class="row">
+      <div class="col s12">
+         <ul class="tabs">
+            <li class="tab col s3">
+               <a href="#tab1">Tab 1</a>
+            </li>
+            <li class="tab col s3">
+               <a href="#tab2">Tab 2</a>
+            </li>
+         </ul>
+      </div>
+      <div id="tab1" class="col s12">
+         <h3>Tab 1</h3>
+         <p>Tab 1 Content</p>
+      </div>
+      <div id="tab2" class="col s12">
+         <h3>Tab 2</h3>
+         <p>Tab 2 Content</p>
+      </div>
+   </div>
+
+- Tabs do not require JavaScript/jQuery as they work with just utilising Materialize classes only.
+
+- We can create Swipeable Tabs; however, this will require JavaScript/jQuery in order to work.
+- To create a swipeable tabs we will require the <ul> which has an id (the id could be called anything). We will make reference to this id in our JavaScript/jQuery to initialise the swipeable tabs. The <ul> element must also have a class of tabs to style the tabs of the unordered list items.
+- The <li> elements require the class of tabs and each <a> element will require a href attribute value which will make reference to the <div> element id which will hold the Tab content.
+   <ul id="tabs-swipe-demo" class="tabs">
+      <li class="tab col s3">
+         <a href="#tab-swipe-1">Tab 1</a>
+      </li>
+      <li class="tab col s3">
+         <a href="#tab-swipe-2">Tab 2</a>
+      </li>
+   </ul>
+   <div id="tab-swipe-1" class="col s12">Tab 1 Content</div>
+   <div id="tab-swipe-2" class="col s12">Tab 2 Content</div>
+
+- The JavaScript/jQuery to initialise the swipeable tabs:
+   $('#tabs-swipe-demo').tabs({
+      swipeable: true
+   });
