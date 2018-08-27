@@ -1,0 +1,36 @@
+Section 5.4 ScrollSpy Nav Scrolling:
+
+--------------------------------------
+ScrollSpy Nav Scrolling
+--------------------------------------
+- ScrollSpy is very easy to implement in Materialize CSS and requires very few classes to make it work and a single line of JavaScript/jQuery to initialize the function.
+
+- For the menu we require a <ul> element with the class of pinned, section and table-of-contents. Each <a> link elements will require a href value for the sections.
+- The pinned class is required so that our navigation gets pinned to the screen when we scroll down our various section otherwise we will not be able to see the navigation for the ScrollSpy effect. the table-of-contents is specific to the ScrollSpy.
+   <div class="col hide-on-small-only m3 l2 s12">
+      <ul class="pinned section table-of-contents">
+         <li>
+            <a href="#nav1">Navigation 1</a>
+         </li>
+         <li>
+            <a href="#nav2">Navigation 2</a>
+         </li>
+      </ul>
+   </div>
+
+- The content which will trigger the scrollSpy will require a <div> wrapper element with an id that is th same as the above <a> link element href attribute value. The <div> wrapper will also have the class of section and scrollSpy. 
+   <div id="nav1" class="section scrollspy">
+      <h4>Navigation 1 Header Title</h4>
+      <p>
+         Navigation 1 Content.
+      </p>
+   </div>
+   <div id="nav2" class="section scrollspy">
+      <h4>Navigation 2 Header Title</h4>
+      <p>
+         Navigation 2 Content
+      </p>
+   </div>
+
+- Finally, we will require the JavaScript/jQuery to initialize the ScrollSpy.
+   $('.scrollspy').scrollSpy();
