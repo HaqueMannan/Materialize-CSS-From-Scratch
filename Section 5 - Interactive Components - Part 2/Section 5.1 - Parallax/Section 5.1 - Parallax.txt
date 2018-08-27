@@ -1,0 +1,43 @@
+Section 5.1 Parallax:
+
+--------------------------------------
+Parallax
+--------------------------------------
+- Materialize allows us to create a scrolling parallax effect with images. This is very simple to implement. We require two images and a text content area for the middle.
+- The images will have two <div> wrapper element, the first will have the class of parallax-container and the second with the class of parallax. We would then have an <img> element containing the image we wish to use for our parallax effect.
+   <div class="parallax-container">
+      <div class="parallax">
+         <img src="img/img1.jpg">
+      </div>
+   </div>
+
+- The text content in the middle will have a <div> wrapper element with the class of content. We would usually give a background colour for the content which is the same as the rest of the web page background e.g. white. We would need second <div> element with the class of row. 
+   <div class="section white">
+      <div class="row container">
+         <h2 class="header">Parallax Header</h2>
+         <p>Parallax Body Text Content</p>
+      </div>
+   </div>
+
+- The second image will have the same markup as the first image but will have a different src image. The final markup should look something like this:
+   <div class="parallax-container">
+      <div class="parallax">
+         <img src="img/img1.jpg">
+      </div>
+   </div>
+   <div class="section white">
+      <div class="row container">
+         <h2 class="header">Parallax Header</h2>
+         <p>Parallax Body Text Content</p>
+      </div>
+   </div>
+   <div class="parallax-container">
+      <div class="parallax">
+         <img src="img/img1.jpg">
+      </div>
+   </div>
+
+- We require JavaScript/jQuery to initialise the Parallax Effect.
+   <script>
+      $('.parallax').parallax();
+   </script>
