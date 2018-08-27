@@ -1,0 +1,26 @@
+Section 5.2 Side Navigation:
+
+--------------------------------------
+Side Navigation
+--------------------------------------
+- To create a sidenav (this is a navigation that appears from the side) using Materialize we would firstly need the markup for our navigation as well as an <a> link element which will act as our button link to open and close the side navigation bar.
+- The <nav> element requires the class of side-nav and must also have an id. The id will be referenced as for the data-activates attribute value for our <a> link element. This <a> link element will also have the class of button-collapse. 
+   <ul id="slide-out" class="side-nav">
+      ...
+   </ul>
+
+   <a href="#!" class="button-collapse" data-activates="slide-out">
+      <i class="material-icons">menu</i>
+   </a>
+
+- The above markup will create the sidebar navigation. The content within the navigation will depend on the markup of the <li> elements we place within the <ul></ul> element.
+
+- The sidebar navigation requires JavaScript/jQuery to initialise the sidebar. There are also some options available for the .sideNav() function.
+   $('.button-collapse').sideNav({
+      menuWidth: 300,
+      edge: 'left',
+      closeOnClick: false,
+      draggable: true,
+      onOpen: function () { console.log('Menu Open') },
+      onClose: function () { console.log('Menu Close') }
+   });
